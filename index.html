@@ -7,8 +7,41 @@
 
   <body>
     <div id="game">
-      <div id="dodger" style="bottom: 0px; left: 180px;"></div>
+      <div id="dodger" style="bottom: 0px;"></div>
     </div>
+<<<<<<< HEAD
     <script src="index.js"></script>
+=======
+    <script>
+      // your code here
+      var dodger = document.getElementById('dodger')
+      dodger.style.backgroundColor = "#FF69B4"
+      dodger.style.bottom = '0px'
+      dodger.style.left = '180px'
+      function moveDodgerLeft() {
+        var leftNumbers = dodger.style.left.replace('px', '')
+        var left = parseInt(leftNumbers)
+
+        if (left > 0) {
+          dodger.style.left = `${left - 1}px`
+        }
+      }
+      function moveDodgerRight() {
+        var leftNumbers = dodger.style.left.replace('px', '')
+        var left = parseInt(leftNumbers)
+
+        if (left > 0) {
+          dodger.style.left = `${left + 1}px`
+        }
+      }
+      document.addEventListener('keydown', function(key) {
+        if (key.which === 37) {
+          moveDodgerLeft()
+        } else if (key.which === 39) {
+          moveDodgerRight()
+        }
+      })
+    </script>
+>>>>>>> ce9d42111af9453ced0517bcb00ed9e75292d3f5
   </body>
 </html>
